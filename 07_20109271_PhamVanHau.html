@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Văn Hậu </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/phamvanhau.js"></script>
+    <style>
+        span {
+            color: red;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row border">
+            <img src="../IMAGES/2.jpg" alt="Phạm Văn Hậu" width="100%">
+        </div>
+        <div class="row border">
+            <nav class="navbar-expand-md">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li id="nhapSach" class="nav-item"><a href="#" class="nav-link">Nhập sách</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã sách</th>
+                        <th>Ngày nhập</th>
+                        <th>Số lượng</th>
+                        <th>Nhà xuất bản</th>
+                        <th>Chiết khấu</th>
+                        <th>Thể loại</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center">Phạm Văn Hậu - 20109271</h4>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Nhập kho sách online</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <span id="thongBao"></span>
+                        </div>
+                    </div>
+                    <!-- form -->
+                    <form action="">
+                        <!-- ma sach -->
+                        <div class="form-group">
+                            <label for="">Mã sách</label>
+                            <input type="text" id="txtMaSach" required placeholder="XXX-YYYYY" class="form-control">
+                            <span id="erMaSach">(*)</span>
+                        </div>
+                        <!-- ngay nhap -->
+                        <div class="form-group">
+                            <label for="">Ngày nhập</label>
+                            <input type="date" id="txtNgayNhap" class="form-control">
+                            <span id="erNgayNhap">(*)</span>
+                        </div>
+                        <!-- so luong -->
+                        <div class="form-group">
+                            <label for="">Số lượng</label>
+                            <input type="text" id="txtSoLuong" required placeholder="So luong" class="form-control">
+                            <span id="erSoLuong">(*)</span>
+                        </div>
+                        <!-- nha xuat ban -->
+                        <div class="form-group">
+                            <label for="">Nhà xuất bản</label>
+                            <select name="txtNhaXB" id="txtNhaXB" class="form-control">
+                                <option value="Nha xuat ban Tre">Nhà xuất bản trẻ</option>
+                                <option value="Nha xuat ban Kim Dong" selected>Nhà xuất bản Kim Đồng</option>
+                                <option value="Nha xuat ban The Gioi Moi">Nhà xuất bản thế giới mới</option>
+                                <option value="Nha xuat ban Tri thuc">Nhà xuất bản tri thức</option>
+                            </select>
+                        </div>
+                        <!-- chiet khau -->
+                        <div class="form-group">
+                            <label for="">Chiếc khấu</label>
+                            <input type="text" id="txtChietKhau" readonly class="form-control" value="20%">
+                        </div>
+                        <!-- the loai -->
+                        <div class="form-group">
+                            <label for="">Thể loại</label>
+                            <input type="radio" name="theLoai" id="vh" checked> <label for="">Văn học</label>
+                            <input type="radio" name="theLoai" id="kh"> <label for="">Khoa học</label>
+                            <input type="radio" name="theLoai" id="tn"> <label for="">Thiếu nhi</label>
+                        </div>
+                        <button id="nhapKho" class="btn btn-secondary" type="button">Nhập kho</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
